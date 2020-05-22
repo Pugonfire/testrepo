@@ -1,0 +1,28 @@
+/* Cascading Style Sheets
+
+Element selector
+*/
+h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 200;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+}
+/* Class selector
+*/
+.quotes {
+  font-style: italic;
+  color: gray;
+  font-size: x-large;
+}
+/* ID selector
+*/
+#bny {
+  font-family: Impact;
+  color: yellow;
+  background-color: black;
+}

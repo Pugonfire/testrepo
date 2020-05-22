@@ -6,16 +6,8 @@
     <!--Head: Title, Meta, Style-->
     <!--Title refers to the tab name-->
     <title>Webpage for puggo</title>
-    <!--Making a class with the prefix "."-->
-    <!--This is an example of internal CSS-->
-    <style>
-      .quotes {
-        font-style: italic;
-        color: gray;
-        font-family: fantasy;
-        font-weight: lighter;
-      }
-    </style>
+    <!--This is an example of external CSS-->
+    <link rel="stylesheet" type="text/css" href="webpagev2.css" />
   </head>
   <body style="text-align: center;">
     <!--title= will enable hover pop-ups-->
@@ -27,19 +19,9 @@
     <br />
     <p>
       Also, pugs'
-      <!--This is an example of inline CSS-->
-      <span
-        style="
-          background-color: black;
-          font-family: Impact;
-          color: yellow;
-          font-size: xx-large;
-        "
-        >noses</span
-      >
+      <span id="bny">noses</span>
       are flat
     </p>
-    <!--This is where I put mah quotes-->
     <h2>Quotes</h2>
     <!--Use style class "quotes"-->
     <div title="Pearls of puggy wisdom" class="quotes">
