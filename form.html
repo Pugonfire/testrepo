@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Application form</title>
+    <link rel="stylesheet" type="text/css" href="webpagev2.css" />
+  </head>
+  <body>
+    <h1>Application Form</h1>
+    <hr></hr>
+    <p>Apply for your personal pug here</p>
+    <br />
+    Username: <input type="text" name="username">
+    <br> Create Password: <input type="password" name="password">
+    <br> Re-type Password: <input type="password" name="cfmpassword">
+    <br> Given name of Pug to adopt: <input type="text" name="pugname">
+    <br> Gender of Pug: 
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female
+    <input type="radio" name="gender" value="random"> Roll the Dice
+    <br>
+    <br> Preferred Age of Pug: 
+    <br> Baby <input type="range" name="" min="0" max="20"> Aged
+    <br>
+    <br> Color of Pug: <input type="color" name="color">
+    <h3> Add-Ons </h3>
+    <span id="bny">Upgrade</span> Vegan <input type="checkbox" name="addons" value="vegan">
+    <br> <span id="bny">Upgrade</span> Extra Chonky <input type="checkbox" name="addons" value="chonk">
+    <br> <span id="bny">Upgrade</span> More Chocolate Chips <input type="checkbox" name="addons" value="chips">
+    <br> <span id="bny">Additional</span> Nanny Brownie <input type="checkbox" name="addons" value="brownie">
+    <br> <span id="bny">Additional</span> Ploth Fam <input type="checkbox" name="addons" value="ploth">
+    <br>
+    <br>
+    Submit Pug-Owner License: <input type="file" name="license">
+    <br>
+    <input type="submit" value="Submit"><input type="reset" value="Reset">
+  </body>
+</html>
