@@ -4,8 +4,31 @@
     <title>Callback Js</title>
   </head>
   <body>
-    Username: <input id="username" />
+    Username: <input id="nameInput"></input>
+    <span style="color: transparent;" id="info">Input your name</span>
     <p>Welcome, <span id="name">Guest</span>!</p>
-    <script></script>
+    <script>
+      var info = document.getElementById("info");
+
+      function appear() {
+        info.style.color = "black";
+      }
+      function restore() {
+        info.style.color = "transparent";
+      }
+      function nameHandler(e) {
+        if (e.keyCode == 13) {
+          var nameInput = document.getElementById("nameInput");
+          var name = document.getElementById("name");
+          name.innerHTML = nameInput.value;
+          name.style.color = "green";
+        }
+        else {console.log(e.keyCode)}//for testing purposes
+      }
+        // callback triggers
+      nameInput.addEventListener("mouseover", appear);
+      nameInput.addEventListener("mouseout", restore);
+      nameInput.addEventListener("keydown", nameHandler);
+    </script>
   </body>
 </html>
