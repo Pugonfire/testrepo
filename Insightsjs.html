@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>InsightsJs</title>
+  </head>
+  <body style="text-align: center;">
+    <p>Times visited <span id="num"></span></p>
+    <p>Last visited: <span id="last"></span></p>
+    <script>
+      // localStorage.lastVisit = "{numVisit:5,date:9 Mar 2020}"
+      var numVisit = 0;
+      var date = "never";
+      if (localStorage.lastVisit) {
+        lastVisit = JSON.parse(localStorage.lastVisit);
+        numVisit = lastVisit.numVisit;
+        date = lastVisit.date;
+      }
+      numVisit++; //increment numVisit by 1 to include this visit
+      //link to html file
+      document.getElementById("num").innerHTML = numVisit;
+      document.getElementById("last").innerHTML = date;
+
+      // saving info on this visit
+      var myLastVisit = {};
+      myLastVisit.date = new Date();
+      myLastVisit.numVisit = numVisit;
+      localStorage.lastVisit = JSON.stringify(myLastVisit);
+    </script>
+  </body>
+</html>
