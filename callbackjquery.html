@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Callback JQuery</title>
+    <script src="jquery-3.5.1.js"></script>
+  </head>
+  <body>
+    Username: <input id="nameInput"></input>
+    <span style="color: transparent;" id="info">Input your name</span>
+    <p>Welcome, <span id="name">Guest</span>!</p>
+    <script>
+
+      function nameHandler(e) {
+        if (e.keyCode == 13) {
+          $("#name").html($("#nameInput").val())
+          $("#nameInput").val('')
+        }
+        else {console.log(e.keyCode)}//for testing purposes
+      }
+        // callback triggers
+      $("#nameInput").mouseover(function() {
+        $("#info").css('color','black')
+      });
+      $("#nameInput").mouseout(function() {
+        $("#info").css('color','transparent')
+      });
+      $("#nameInput").keyup(nameHandler);
+    </script>
+  </body>
+</html>
