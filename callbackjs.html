@@ -4,7 +4,7 @@
     <title>Callback Js</title>
   </head>
   <body>
-    Username: <input id="nameInput"></input>
+    Username: <input id="nameInput" />
     <span style="color: transparent;" id="info">Input your name</span>
     <p>Welcome, <span id="name">Guest</span>!</p>
     <script>
@@ -22,10 +22,11 @@
           var name = document.getElementById("name");
           name.innerHTML = nameInput.value;
           name.style.color = "green";
-        }
-        else {console.log(e.keyCode)}//for testing purposes
+        } else {
+          console.log(e.keyCode);
+        } //for testing purposes
       }
-        // callback triggers
+      // callback triggers
       nameInput.addEventListener("mouseover", appear);
       nameInput.addEventListener("mouseout", restore);
       nameInput.addEventListener("keydown", nameHandler);

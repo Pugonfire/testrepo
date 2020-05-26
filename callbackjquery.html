@@ -5,26 +5,42 @@
     <script src="jquery-3.5.1.js"></script>
   </head>
   <body>
-    Username: <input id="nameInput"></input>
+    Username: <input id="nameInput" />
     <span style="color: transparent;" id="info">Input your name</span>
     <p>Welcome, <span id="name">Guest</span>!</p>
+    <br />
+    <h4>List of User Logins</h4>
+    <ul></ul>
+    <p id="click">Click me</p>
     <script>
-
       function nameHandler(e) {
         if (e.keyCode == 13) {
-          $("#name").html($("#nameInput").val())
-          $("#nameInput").val('')
-        }
-        else {console.log(e.keyCode)}//for testing purposes
+          var nameInput = $("#nameInput").val();
+          $("#name").html(nameInput);
+          $("ul").append("<li>" + nameInput + "</li>"); //add input into a list
+          $("#nameInput").val(""); //clear input bar
+        } else {
+          console.log(e.keyCode);
+        } //for testing purposes
       }
-        // callback triggers
-      $("#nameInput").mouseover(function() {
-        $("#info").css('color','black')
+      // callback triggers
+      $("#nameInput").mouseover(function () {
+        $("#info").css("color", "black");
       });
-      $("#nameInput").mouseout(function() {
-        $("#info").css('color','transparent')
+      $("#nameInput").mouseout(function () {
+        $("#info").css("color", "transparent");
       });
       $("#nameInput").keyup(nameHandler);
+      var numclicks = 1;
+      $("#click").click(function () {
+        console.log(numclicks); //For testing purposes
+        if (numclicks % 2 == 1) {
+          $(this).css("color", "red");
+        } else {
+          $(this).css("color", "black");
+        }
+        numclicks++;
+      });
     </script>
   </body>
 </html>
