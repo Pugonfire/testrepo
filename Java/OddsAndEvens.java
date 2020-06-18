@@ -3,7 +3,7 @@ package Java;
 import java.util.Random;
 import java.util.Scanner;
 
-public interface OddsAndEvens {
+public class OddsAndEvens {
     public static final Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
