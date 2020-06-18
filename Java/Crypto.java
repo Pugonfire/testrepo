@@ -1,8 +1,15 @@
 package Java;
 
+import java.util.Scanner;
+
 public class Crypto {
     public static void main(String[] args) {
-        System.out.println(encryptString("What's up Bebe!", 2, 3));
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input text here: ");
+        String message = input.nextLine();
+        System.out.print("Input key (integer): ");
+        int key = input.nextInt();
+        System.out.println("Cyphertext: " + encryptString(message, key, 3));
     }
 
     // Parameter: "What's up?"
