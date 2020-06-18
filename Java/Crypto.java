@@ -9,7 +9,7 @@ public class Crypto {
         String message = input.nextLine();
         System.out.print("Input key (integer): ");
         int key = input.nextInt();
-        System.out.println("Cyphertext: " + encryptString(message, key, 3));
+        System.out.println("Ciphertext: " + encryptString(message, key, 3));
         input.close();
     }
 
@@ -80,9 +80,9 @@ public class Crypto {
     // size
     // Returns: Cyphertext
     public static String encryptString(String message, int shift, int size) {
-        String cyphertext = normalizeText(message);
-        cyphertext = caeserify(cyphertext, shift);
-        cyphertext = groupify(cyphertext, size);
-        return cyphertext;
+        String ciphertext = normalizeText(message);
+        ciphertext = caeserify(ciphertext, shift);
+        ciphertext = groupify(ciphertext, size);
+        return ciphertext;
     }
 }
