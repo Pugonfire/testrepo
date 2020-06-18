@@ -10,6 +10,7 @@ public class Crypto {
         System.out.print("Input key (integer): ");
         int key = input.nextInt();
         System.out.println("Cyphertext: " + encryptString(message, key, 3));
+        input.close();
     }
 
     // Parameter: "What's up?"
