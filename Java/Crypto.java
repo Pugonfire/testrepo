@@ -51,7 +51,12 @@ public class Crypto {
     public static String groupify(String message, int size) {
         // Adding the "x"s
         int n = message.length();
-        int numx = size - (n % size); // number of x to append to string
+        int x = n % size;
+        int numx = 0;
+        if (x == 0) { // no need to append any "x"
+        } else {
+            numx = size - (x); // number of x to append to string
+        }
         for (int i = 0; i < numx; i++) {
             message = message + "x";
         }
